@@ -24,7 +24,7 @@ private const val UNSPLASH_STARTING_PAGE_INDEX = 1
 
 class UnsplashPagingSource(
     private val service: UnsplashService,
-    private val query: String
+    private val query: String,
 ) : PagingSource<Int, UnsplashPhoto>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, UnsplashPhoto> {

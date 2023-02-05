@@ -39,7 +39,7 @@ class PlantListFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         val binding = FragmentPlantListBinding.inflate(inflater, container, false)
         context ?: return binding.root

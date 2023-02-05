@@ -26,7 +26,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class GardenPlantingListViewModel @Inject internal constructor(
-    gardenPlantingRepository: GardenPlantingRepository
+    gardenPlantingRepository: GardenPlantingRepository,
 ) : ViewModel() {
     val plantAndGardenPlantings: LiveData<List<PlantAndGardenPlantings>> =
         gardenPlantingRepository.getPlantedGardens().asLiveData()

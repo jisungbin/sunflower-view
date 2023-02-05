@@ -34,7 +34,7 @@ import com.google.android.material.shape.ShapeAppearancePathProvider
 class MaskedCardView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
-    defStyle: Int = R.attr.materialCardViewStyle
+    defStyle: Int = R.attr.materialCardViewStyle,
 ) : MaterialCardView(context, attrs, defStyle) {
     @SuppressLint("RestrictedApi")
     private val pathProvider = ShapeAppearancePathProvider()

@@ -28,5 +28,5 @@ data class PlantAndGardenPlantings(
     val plant: Plant,
 
     @Relation(parentColumn = "id", entityColumn = "plant_id")
-    val gardenPlantings: List<GardenPlanting> = emptyList()
+    val gardenPlantings: List<GardenPlanting> = emptyList(),
 )

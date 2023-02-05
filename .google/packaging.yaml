@@ -17,19 +17,19 @@
 # This file is used by Google as part of our samples packaging process.
 # End users may safely ignore this file. It has no relevance to other systems.
 ---
-status:       PUBLISHED
-technologies: [Android]
-categories:   [Getting Started, Jetpack]
-languages:    [Kotlin]
-solutions:    [Mobile]
+status: PUBLISHED
+technologies: [ Android ]
+categories: [ Getting Started, Jetpack ]
+languages: [ Kotlin ]
+solutions: [ Mobile ]
 
-github:       android/sunflower
+github: android/sunflower
 
-level:        INTERMEDIATE
+level: INTERMEDIATE
 
-icon:         screenshots/ic_launcher-web.png
+icon: screenshots/ic_launcher-web.png
 
 apiRefs:
-    - android:android.support.constraint.ConstraintLayout
+  - android:android.support.constraint.ConstraintLayout
 
 license: apache2

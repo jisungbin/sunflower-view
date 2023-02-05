@@ -51,7 +51,7 @@ class GardenPlantingAdapter :
     }
 
     class ViewHolder(
-        private val binding: ListItemGardenPlantingBinding
+        private val binding: ListItemGardenPlantingBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.setClickListener { view ->
@@ -80,14 +80,14 @@ private class GardenPlantDiffCallback : DiffUtil.ItemCallback<PlantAndGardenPlan
 
     override fun areItemsTheSame(
         oldItem: PlantAndGardenPlantings,
-        newItem: PlantAndGardenPlantings
+        newItem: PlantAndGardenPlantings,
     ): Boolean {
         return oldItem.plant.plantId == newItem.plant.plantId
     }
 
     override fun areContentsTheSame(
         oldItem: PlantAndGardenPlantings,
-        newItem: PlantAndGardenPlantings
+        newItem: PlantAndGardenPlantings,
     ): Boolean {
         return oldItem.plant == newItem.plant
     }

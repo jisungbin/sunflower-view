@@ -20,8 +20,8 @@ import androidx.paging.Pager
 import androidx.paging.PagingConfig
 import androidx.paging.PagingData
 import com.google.samples.apps.sunflower.api.UnsplashService
-import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
+import kotlinx.coroutines.flow.Flow
 
 class UnsplashRepository @Inject constructor(private val service: UnsplashService) {
 

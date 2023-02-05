@@ -42,7 +42,8 @@ abstract class AppDatabase : RoomDatabase() {
     companion object {
 
         // For Singleton instantiation
-        @Volatile private var instance: AppDatabase? = null
+        @Volatile
+        private var instance: AppDatabase? = null
 
         fun getInstance(context: Context): AppDatabase {
             return instance ?: synchronized(this) {
@@ -59,8 +60,8 @@ abstract class AppDatabase : RoomDatabase() {
                         override fun onCreate(db: SupportSQLiteDatabase) {
                             super.onCreate(db)
                             val request = OneTimeWorkRequestBuilder<SeedDatabaseWorker>()
-                                    .setInputData(workDataOf(KEY_FILENAME to PLANT_DATA_FILENAME))
-                                    .build()
+                                .setInputData(workDataOf(KEY_FILENAME to PLANT_DATA_FILENAME))
+                                .build()
                             WorkManager.getInstance(context).enqueue(request)
                         }
                     }

@@ -21,7 +21,7 @@ import javax.inject.Singleton
 
 @Singleton
 class GardenPlantingRepository @Inject constructor(
-    private val gardenPlantingDao: GardenPlantingDao
+    private val gardenPlantingDao: GardenPlantingDao,
 ) {
 
     suspend fun createGardenPlanting(plantId: String) {

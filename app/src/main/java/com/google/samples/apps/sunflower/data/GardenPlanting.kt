@@ -52,7 +52,7 @@ data class GardenPlanting(
      * time to water the plant.
      */
     @ColumnInfo(name = "last_watering_date")
-    val lastWateringDate: Calendar = Calendar.getInstance()
+    val lastWateringDate: Calendar = Calendar.getInstance(),
 ) {
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")

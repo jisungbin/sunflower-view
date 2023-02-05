@@ -52,7 +52,7 @@ class GalleryAdapter : PagingDataAdapter<UnsplashPhoto, GalleryViewHolder>(Galle
     }
 
     class GalleryViewHolder(
-        private val binding: ListItemPhotoBinding
+        private val binding: ListItemPhotoBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.setClickListener { view ->

@@ -25,11 +25,10 @@ import com.google.samples.apps.sunflower.PlantListFragment
 import com.google.samples.apps.sunflower.data.Plant
 import com.google.samples.apps.sunflower.data.PlantRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
 /**
  * The ViewModel for [PlantListFragment].
@@ -37,7 +36,7 @@ import javax.inject.Inject
 @HiltViewModel
 class PlantListViewModel @Inject internal constructor(
     plantRepository: PlantRepository,
-    private val savedStateHandle: SavedStateHandle
+    private val savedStateHandle: SavedStateHandle,
 ) : ViewModel() {
 
     private val growZone: MutableStateFlow<Int> = MutableStateFlow(

@@ -28,6 +28,7 @@ import com.google.samples.apps.sunflower.utilities.getValue
 import com.google.samples.apps.sunflower.utilities.testPlant
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
+import javax.inject.Inject
 import kotlinx.coroutines.test.runTest
 import org.junit.After
 import org.junit.Assert.assertFalse
@@ -35,7 +36,6 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.rules.RuleChain
-import javax.inject.Inject
 
 @HiltAndroidTest
 class PlantDetailViewModelTest {
@@ -48,9 +48,9 @@ class PlantDetailViewModelTest {
 
     @get:Rule
     val rule: RuleChain = RuleChain
-            .outerRule(hiltRule)
-            .around(instantTaskExecutorRule)
-            .around(coroutineRule)
+        .outerRule(hiltRule)
+        .around(instantTaskExecutorRule)
+        .around(coroutineRule)
 
     @Inject
     lateinit var plantRepository: PlantRepository

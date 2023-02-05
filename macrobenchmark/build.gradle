@@ -49,6 +49,7 @@ android {
     }
 
     targetProjectPath = ":app"
+    namespace 'com.google.samples.apps.sunflower.macrobenchmark'
     experimentalProperties["android.experimental.self-instrumenting"] = true
 }
 

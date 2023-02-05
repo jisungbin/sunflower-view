@@ -17,15 +17,15 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it,
-    # but specifies master branch (old default).
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-        ref: master
-        
-    - run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git merge origin/main
-        git push
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it,
+      # but specifies master branch (old default).
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          ref: master
+
+      - run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git merge origin/main
+          git push

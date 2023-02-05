@@ -49,7 +49,7 @@ class PlantAdapter : ListAdapter<Plant, RecyclerView.ViewHolder>(PlantDiffCallba
     }
 
     class PlantViewHolder(
-        private val binding: ListItemPlantBinding
+        private val binding: ListItemPlantBinding,
     ) : RecyclerView.ViewHolder(binding.root) {
         init {
             binding.setClickListener {
@@ -61,7 +61,7 @@ class PlantAdapter : ListAdapter<Plant, RecyclerView.ViewHolder>(PlantDiffCallba
 
         private fun navigateToPlant(
             plant: Plant,
-            view: View
+            view: View,
         ) {
             val direction =
                 HomeViewPagerFragmentDirections.actionViewPagerFragmentToPlantDetailFragment(
